@@ -154,32 +154,38 @@ const SlotPage = new Page({
  <span>о</span>
  <span>т</span>
  <span>ы</span>
-</div>
-   <div class="myslots spin-slots">
- <div class="reel"></div>
- <div class="reel"></div>
- <div class="reel"></div>
-</div>
+ </div>
+
+<div class="btns-top">
 <button  class="rules-slots" type="text">Правила</button>
 <button class="back-main" type="text"><a class="main-back" href="#main">Выйти</a></button>
-<div class="slot-image"><img class="slot-machine" src="images/slot12.png" title="slot-machine" alt="slot-machine"></div>
-<form class="play">
+</div>
+
+<div class="slot-image"><img class="slot-machine" src="images/slot12.png" title="slot-machine" alt="slot-machine">
+ <div class="myslots spin-slots">
+ <div class="reel"></div>
+ <div class="reel"></div>
+ <div class="reel"></div>
+</div>
+</div>
+
+<form class="play-slots">
     <fieldset>
         <legend class="put_slots">Выберите ставку</legend>
         <div class="container-slots">
             <div class="radio-slots">
               <input id="radio-1" name="radio" type="radio" checked>
-              <label for="radio-1" class="radio-label">5 фишек</label>
+              <label for="radio-1" class="radio-label-slot">5 фишек</label>
             </div>
           
             <div class="radio-slots">
               <input id="radio-2" name="radio" type="radio">
-              <label  for="radio-2" class="radio-label">10 фишек</label>
+              <label  for="radio-2" class="radio-label-slot">10 фишек</label>
             </div>
           
             <div class="radio-slots">
               <input id="radio-3" name="radio" type="radio">
-              <label for="radio-3" class="radio-label">15 фишек</label>
+              <label for="radio-3" class="radio-label-slot">15 фишек</label>
             </div>
           </div>
         <button class="start-game-slots" type="submit">начать</button>

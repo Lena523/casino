@@ -56,6 +56,11 @@ body.main {
   background-repeat: no-repeat;
   min-height: 100vh !important;
 }
+@media only screen and (max-width: 1400px) {
+  body.main {
+    width: 95%;
+  }
+}
 
 body.enter {
   background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #e6ca91 8%, #c7a150 30%, #e5bf67 40%, transparent 0%), radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #bd9432 62.5%, #d9b154 20%);
@@ -65,10 +70,21 @@ body.enter {
   background-repeat: no-repeat;
   min-height: 100vh !important;
 }
+@media only screen and (max-width: 1400px) {
+  body.enter {
+    width: 95%;
+  }
+}
 
 body.roulette {
   background: #3e8e4d;
   min-height: 100vh !important;
+}
+@media only screen and (max-width: 1400px) {
+  body.roulette {
+    width: 95%;
+    padding-right: 20px;
+  }
 }
 
 body.slot {
@@ -78,6 +94,11 @@ body.slot {
   background-attachment: fixed;
   background-repeat: no-repeat;
   min-height: 100vh !important;
+}
+@media only screen and (max-width: 1400px) {
+  body.slot {
+    width: 95%;
+  }
 }
 
 .shine {
@@ -631,6 +652,12 @@ body.slot {
   font-family: "Old Standard TT";
   font-size: 15px;
 }
+@media only screen and (max-width: 1400px) {
+  .butt {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
 
 .butt:hover {
   -webkit-transform: scale(1.1);
@@ -1129,11 +1156,35 @@ audio {
           transform: scale(1.1);
 }
 
+@media only screen and (max-width: 1400px) {
+  .svg {
+    -webkit-transform: translate(30px, 50px);
+            transform: translate(30px, 50px);
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .svg {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
 .play {
   position: absolute;
   left: 70%;
-  top: 25%;
+  top: 27%;
   z-index: 10;
+}
+@media only screen and (max-width: 1400px) {
+  .play {
+    top: 15%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .play {
+    top: 12%;
+  }
 }
 
 .get-info {
@@ -1141,6 +1192,11 @@ audio {
   left: 80%;
   top: 5%;
   z-index: 25;
+}
+@media only screen and (max-width: 1400px) {
+  .get-info {
+    left: 70%;
+  }
 }
 
 .main-link {
@@ -1212,12 +1268,13 @@ legend {
   border: 6px solid red;
 }
 
-label {
+.radio-label {
   font-size: 18px;
   font-weight: bold;
   color: black;
   margin-top: 5px;
   font-family: "Old Standard TT";
+  position: absolute;
 }
 
 .radio {
@@ -1236,6 +1293,7 @@ p {
   font-size: 22px;
   font-weight: bold;
   color: black;
+  margin-top: 20px;
   font-family: "Old Standard TT";
 }
 
@@ -1252,17 +1310,24 @@ p {
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+@media only screen and (max-width: 1200px) {
+  .start-game {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-top: 15px;
+  }
+}
 
 .start-game:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   cursor: pointer;
 }
 
 .cash-block {
   position: absolute;
-  top: 620px;
-  left: 85%;
+  top: 70%;
+  left: 80%;
   z-index: 12;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1277,6 +1342,20 @@ p {
   font-size: 20px;
   font-family: "Old Standard TT";
   color: rgb(233, 187, 73);
+}
+@media only screen and (max-width: 1400px) {
+  .cash-block {
+    top: 43%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .cash-block {
+    top: 35%;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
 }
 
 .not-seen {
@@ -1296,9 +1375,14 @@ p {
   font-family: "Old Standard TT";
 }
 
+.fishki {
+  display: block;
+  margin-top: 20px;
+}
+
 .show-rules {
   position: absolute;
-  z-index: 20;
+  z-index: 55;
   background: url(../images/rules-back.png);
   background-position: center center;
   background-size: cover;
@@ -1306,19 +1390,35 @@ p {
   border-radius: 10px;
   width: 600px;
   height: 343px;
-  left: 500px;
-  top: 120px;
+  left: 30%;
+  top: 15%;
   padding: 40px;
   font-family: "Old Standard TT";
   color: white;
   -webkit-box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
           box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
 }
+@media only screen and (max-width: 1400px) {
+  .show-rules {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    padding: 15px;
+    top: 10%;
+    left: 25%;
+  }
+}
 
 h3 {
   text-align: center;
   font-size: 20px;
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 1400px) {
+  h3 {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
 }
 
 ul {
@@ -1327,6 +1427,13 @@ ul {
   font-size: 16px;
   word-spacing: normal;
   line-height: normal;
+}
+@media only screen and (max-width: 1400px) {
+  ul {
+    margin-left: 100px;
+    font-size: 14px;
+    margin-down: 10px;
+  }
 }
 
 ol {
@@ -1337,11 +1444,22 @@ ol {
   word-spacing: normal;
   line-height: normal;
 }
+@media only screen and (max-width: 1400px) {
+  ol {
+    margin-left: 100px;
+    font-size: 14px;
+  }
+}
 
 h6 {
   text-align: center;
   font-size: 18px;
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 1400px) {
+  h6 {
+    font-size: 16px;
+  }
 }
 
 .close-rules {
@@ -1358,6 +1476,13 @@ h6 {
   font-size: 16px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+@media only screen and (max-width: 1400px) {
+  .close-rules {
+    font-size: 14px;
+    width: 70px;
+    height: 25px;
+  }
 }
 
 .close-rules:hover {
@@ -1413,11 +1538,20 @@ h6 {
   border-radius: 10px;
   width: 500px;
   height: 250px;
-  left: 500px;
-  top: 120px;
+  left: 30%;
+  top: 15%;
   padding: 40px;
   -webkit-box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
           box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
+}
+@media only screen and (max-width: 1400px) {
+  .get-results {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    padding: 15px;
+    top: 10%;
+    left: 15%;
+  }
 }
 
 .close-results {
@@ -1437,6 +1571,11 @@ h6 {
   top: 250px;
   left: 10px;
   cursor: pointer;
+}
+@media only screen and (max-width: 1400px) {
+  .close-results {
+    top: 200px;
+  }
 }
 
 .my-results {
@@ -1467,23 +1606,38 @@ h6 {
 .slot-image {
   max-width: 660px;
   max-height: 880px;
-  position: absolute;
+  left: 11%;
   top: 11%;
-  left: 16.3%;
-  z-index: -3;
+  position: absolute;
+}
+@media only screen and (max-width: 1400px) {
+  .slot-image {
+    left: 2%;
+    top: 4%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .slot-image {
+    left: -4%;
+    top: 2%;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
 }
 
 .slot-machine {
   max-width: 660px;
   max-height: 880px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .myslots {
   position: absolute;
-  top: 43.6%;
-  left: 25%;
+  top: 36.5%;
+  left: 23%;
   width: 276.5px;
   height: 237px;
   display: -webkit-box;
@@ -1529,8 +1683,25 @@ h6 {
           box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.3);
 }
 
-.rules-slots {
+.btns-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 300px;
+  top: 7%;
+  left: 75%;
+}
+@media only screen and (max-width: 1400px) {
+  .btns-top {
+    left: 65%;
+    top: 14%;
+  }
+}
+
+.rules-slots {
   width: 100px;
   height: 50px;
   background: rgb(238, 212, 143);
@@ -1539,8 +1710,6 @@ h6 {
   font-size: 18px;
   font-weight: bold;
   font-family: "Old Standard TT";
-  left: 80%;
-  top: 50px;
   border-radius: 7px;
   display: inline-block;
   -webkit-transition: 0.8s;
@@ -1550,13 +1719,10 @@ h6 {
 }
 
 .back-main {
-  position: absolute;
   width: 100px;
   height: 50px;
   background: rgb(238, 212, 143);
   background: linear-gradient(99deg, rgba(238, 212, 143, 0.9948573179) 0%, rgb(57, 56, 53) 35%, rgb(17, 18, 18) 100%);
-  left: 90%;
-  top: 50px;
   border-radius: 7px;
   display: inline-block;
   -webkit-transition: 0.8s;
@@ -1623,15 +1789,24 @@ label {
       align-content: baseline;
 }
 
-.container-slots {
-  margin-bottom: 20px;
-}
-
 p {
   font-size: 22px;
   font-weight: bold;
   color: black;
   font-family: "Old Standard TT";
+}
+
+.play-slots {
+  position: absolute;
+  left: 70%;
+  top: 27%;
+  z-index: 10;
+}
+@media only screen and (max-width: 1400px) {
+  .play-slots {
+    top: 25%;
+    left: 58%;
+  }
 }
 
 .start-game-slots {
@@ -1669,6 +1844,11 @@ p {
   left: 25%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 1400px) {
+  .container-title-slots {
+    left: 35%;
+  }
 }
 
 .container-title-slots span {
@@ -1769,16 +1949,24 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
-  width: 600px;
-  height: 343px;
+  left: 30%;
+  top: 15%;
   left: 500px;
   top: 120px;
   padding: 40px;
+  width: 520px;
   font-family: "Old Standard TT";
   color: rgb(244, 189, 87);
   -webkit-box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
           box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
   cursor: pointer;
+}
+@media only screen and (max-width: 1400px) {
+  .show-rules-slots {
+    left: 22%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
 .read-rules {
@@ -1845,11 +2033,18 @@ p {
   border-radius: 10px;
   width: 400px;
   height: 200px;
-  left: 600px;
-  top: 105px;
+  left: 70%;
+  top: 15%;
   padding: 10px;
   -webkit-box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
           box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
+}
+@media only screen and (max-width: 1400px) {
+  .get-results-slots {
+    left: 2%;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
 }
 
 .inner-text-slots {

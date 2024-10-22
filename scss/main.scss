@@ -42,6 +42,14 @@ table {
 	border-spacing: 0;
 }
 
+@mixin onlylarge($w)
+{
+    @media only screen and (max-width: $w)
+    {
+        @content;
+    }
+}
+
 
  body.main{	
    background:url(../images/empty.png);
@@ -50,6 +58,8 @@ table {
    background-attachment: fixed;
    background-repeat: no-repeat;
    min-height: 100vh !important;
+
+   @include onlylarge(1400px){width:95%;}
 }
 
   body.enter{
@@ -61,11 +71,15 @@ table {
 	background-attachment: fixed;
 	background-repeat: no-repeat;	
 	min-height: 100vh !important;
+
+	@include onlylarge(1400px){width:95%;}
 }
 
 body.roulette{
 	background:#3e8e4d;
 	min-height: 100vh !important;
+
+	@include onlylarge(1400px){width:95%;padding-right: 20px;}	
 }
 
 body.slot {
@@ -75,6 +89,8 @@ body.slot {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	min-height: 100vh !important;
+
+	@include onlylarge(1400px){width:95%;}
 }
 
 //Enter-Page
@@ -551,6 +567,8 @@ $text-color: rgba(9, 121, 20, 0.243);
 	   color:rgb(240, 190, 144);
 	   font-family:'Old Standard TT';
 	   font-size: 15px;
+
+	   @include onlylarge(1400px){transform: scale(0.9);}
    }
 
    .butt:hover{
@@ -1001,11 +1019,19 @@ audio{
 
 //Roulette-Page
 
+.svg{
+	
+	@include onlylarge(1400px){transform: translate(30px,50px); width:80%;}
+	@include onlylarge(1200px){transform:scale(0.8);}
+}
+
 .play{
     position:absolute;
     left:70%;
-    top:25%;
+    top:27%;
     z-index:10;
+	@include onlylarge(1400px){top:15%;}
+	@include onlylarge(1200px){top:12%;}
 }
 
 .get-info{
@@ -1013,6 +1039,7 @@ audio{
     left:80%;
     top:5%;
 	z-index: 25;
+	@include onlylarge(1400px){left:70%;}
 }
 
 .main-link{
@@ -1081,12 +1108,13 @@ legend{
     border:6px solid red;
 }
 
-label{
+.radio-label{
     font-size: 18px;
     font-weight: bold;
     color:black;
     margin-top: 5px;
     font-family: 'Old Standard TT';
+	position: absolute;
 }
 
 .radio{
@@ -1102,6 +1130,7 @@ p{
     font-size: 22px;
     font-weight: bold;
     color:black;
+	margin-top: 20px;
     font-family: 'Old Standard TT';
 }
 
@@ -1116,17 +1145,19 @@ p{
     color:black;
     font-weight: bold;
     transition:0.8s;
+
+	@include onlylarge(1200px){transform: scale(0.8);margin-top: 15px;}
 }
 
 .start-game:hover{
-transform: scale(1.2);
+transform: scale(1.1);
 cursor: pointer;
 }
 
 .cash-block{
     position:absolute; 
-    top:620px; 
-    left:85%;
+    top:70%;
+    left:80%;
     z-index:12;
     display: flex;
     flex-direction: column;
@@ -1134,6 +1165,9 @@ cursor: pointer;
 	font-size: 20px;
     font-family:'Old Standard TT';
     color: rgb(233, 187, 73);
+	@include onlylarge(1400px){top:43%;transform: scale(0.8);}
+	@include onlylarge(1200px){top:35%;transform: scale(0.5);}
+	
 }
 
 .not-seen{
@@ -1153,9 +1187,14 @@ cursor: pointer;
  font-family:'Old Standard TT';
 }
 
+.fishki{
+	display: block;
+	margin-top: 20px;
+}
+
 .show-rules{
 	position:absolute;
-	z-index: 20;
+	z-index: 55;
 	background:url(../images/rules-back.png);
 	background-position: center center;
 	background-size: cover;
@@ -1163,18 +1202,22 @@ cursor: pointer;
 	border-radius: 10px;
 	width:600px;
 	height:343px;
-	left:500px;
-	top:120px;
+	left:30%;
+	top:15%;
 	padding:40px;
 	font-family:'Old Standard TT';
 	color:white;
 	box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
+
+	@include onlylarge(1400px){transform: scale(0.8);padding:15px;top:10%;left:25%;}
 }
 
 h3{
 	text-align: center;
 	font-size:20px;
 	margin-bottom: 5px;
+
+	@include onlylarge(1400px){font-size:16px;margin-top: 30px;margin-bottom: 15px;}
 }
 
 ul{
@@ -1183,6 +1226,8 @@ ul{
 	font-size: 16px;
 	word-spacing: normal;
 	line-height: normal;
+
+	@include onlylarge(1400px){margin-left:100px;font-size: 14px;margin-down:10px;}
 }
 
 ol{
@@ -1192,12 +1237,16 @@ ol{
 	font-size: 16px;
 	word-spacing: normal;
 	line-height: normal;
+
+	@include onlylarge(1400px){margin-left:100px;font-size: 14px;}
 }
 
 h6{
 	text-align: center;
 	font-size: 18px;
 	margin-bottom: 5px;
+
+	@include onlylarge(1400px){font-size:16px;}
 }
 
 .close-rules{
@@ -1213,6 +1262,8 @@ h6{
 	font-weight: 400;
 	font-size: 16px;
 	transition: 0.5s;
+
+	@include onlylarge(1400px){font-size: 14px;width:70px;height:25px;}
 }
 
 .close-rules:hover{
@@ -1273,10 +1324,12 @@ h6{
 	border-radius: 10px;
 	width:500px;
 	height:250px;
-	left:500px;
-	top:120px;
+	left:30%;
+	top:15%;
 	padding:40px;
 	box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
+
+	@include onlylarge(1400px){transform: scale(0.8);padding:15px;top:10%;left:15%;}
 }
 
 .close-results{
@@ -1295,6 +1348,8 @@ h6{
 	top:250px;
 	left:10px;
 	cursor: pointer;
+
+	@include onlylarge(1400px){top:200px;}
 }
 
 .my-results{
@@ -1328,16 +1383,19 @@ h6{
 .slot-image{
 	max-width: 660px;
 	max-height: 880px;
+	left:11%;
+	top:11%;
 	position: absolute;
-	top: 11%;
-	left:16.3%;
-	z-index: -3;
+
+	@include onlylarge(1400px){left:2%;top:4%;transform: scale(0.8);}
+	@include onlylarge(1200px){left:-4%;top:2%;transform: scale(0.7);}
    }
    
    .slot-machine{
 	   max-width: 660px;
 	   max-height: 880px;
-	   object-fit: contain;
+	   -o-object-fit: contain;
+	      object-fit: contain;
    }
 
 $icon_width: 79px;
@@ -1345,11 +1403,11 @@ $icon_height: 79px;
 $num_icons: 9;
 
 .myslots {
-	position:absolute;
-	top:43.6%;
-	left:25%;
-	width: 3.5 * $icon_width;
-	height: 3 * $icon_height;
+    position: absolute;
+	top:36.5%;
+	left:23%;
+	width: 276.5px;
+	height: 237px;
 	display: flex;
 	justify-content: space-between;
 	padding: 0.3 * $icon_width;
@@ -1391,8 +1449,18 @@ $num_icons: 9;
 	
 }
 
+.btns-top{
+	display: flex;
+	position: absolute;
+	justify-content: space-around;
+	width:300px;
+	top:7%;
+	left:75%;
+
+	@include onlylarge(1400px){left:65%;top:14%;}
+}
+
 .rules-slots{
-	position:absolute;
 	width:100px;
 	height:50px;
     background: rgb(238,212,143);
@@ -1401,8 +1469,6 @@ $num_icons: 9;
 	font-size: 18px;
 	font-weight: bold;
 	font-family:'Old Standard TT';
-	left:80%;
-	top:50px;
 	border-radius: 7px;
 	display: inline-block;
     transition:0.8s;
@@ -1410,13 +1476,10 @@ $num_icons: 9;
 }
 
 .back-main{
-	position:absolute;
 	width:100px;
 	height:50px;
 	background: rgb(238,212,143);
     background: linear-gradient(99deg, rgba(238,212,143,0.9948573179271709) 0%, rgba(57,56,53,1) 35%, rgba(17,18,18,1) 100%);
-	left:90%;
-	top:50px;
 	border-radius: 7px;
 	display: inline-block;
     transition:0.8s;
@@ -1476,15 +1539,21 @@ label{
     align-content: baseline;
 }
 
-.container-slots{
-    margin-bottom: 20px;;
-}
 
 p{
     font-size: 22px;
     font-weight: bold;
     color:black;
     font-family: 'Old Standard TT';
+}
+
+.play-slots{
+    position:absolute;
+    left:70%;
+    top:27%;
+    z-index:10;
+	@include onlylarge(1400px){top:25%;left:58%;}
+	
 }
 
 .start-game-slots{
@@ -1500,6 +1569,7 @@ p{
 	box-shadow: 26px 3px 8px 0px rgba(92, 71, 43, 0.5);
 	background: rgb(238,212,143);
     background: linear-gradient(99deg, rgba(238,212,143,0.9948573179271709) 0%, rgba(57,56,53,1) 35%, rgba(17,18,18,1) 100%);
+
 }
 
 .start-game-slots:hover{
@@ -1514,6 +1584,8 @@ cursor: pointer;
 	top: 10%;
 	left: 25%;
 	transform: translate(-50%, -50%);
+
+	@include onlylarge(1400px){left:35%;}
   }
 
   .container-title-slots span {
@@ -1591,15 +1663,18 @@ cursor: pointer;
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 10px;
-	width:600px;
-	height:343px;
+	left:30%;
+	top:15%;
 	left:500px;
 	top:120px;
 	padding:40px;
+	width:520px;
 	font-family:'Old Standard TT';
 	color:rgb(244, 189, 87);
 	box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
 	cursor: pointer;
+
+	@include onlylarge(1400px){left:22%;transform: scale(0.8);}
 }
 
 .read-rules{
@@ -1665,10 +1740,12 @@ cursor: pointer;
 	border-radius: 10px;
 	width:400px;
 	height:200px;
-	left:600px;
-	top:105px;
+	left:70%;
+	top:15%;
 	padding:10px;
 	box-shadow: 50px -34px 8px 0px rgba(34, 60, 80, 0.2);
+
+	@include onlylarge(1400px){left:2%;transform: scale(0.9);}
 }
 
 .inner-text-slots{

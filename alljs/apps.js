@@ -875,11 +875,11 @@ class Model {
    }
 
    leaveThePage(){
-    const pageId = location.hash.slice(1).toLowerCase();
-    if(pageId=='main'){
-      this.view.closeThePage();
-    }
-    
+      const pageId = location.hash.slice(1).toLowerCase();
+      if(pageId=='main'){
+        this.view.closeThePage();
+      }
+     
    }
 
    async takeTest(){

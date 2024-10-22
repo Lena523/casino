@@ -36,7 +36,8 @@ class Roulette extends Component{
       let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       svg.setAttribute("width","1150");
       svg.setAttribute("height","630");
-      svg.setAttribute('transform','translate(150,100)');
+      svg.setAttribute('transform','translate(100,100)');
+      svg.setAttribute('class','svg');
       document.body.append(svg);
       
       let rect=document.createElementNS(svg.namespaceURI,"rect");
